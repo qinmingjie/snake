@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#box1{
+			width:800px;
+			height:500px;
+			position:relative;
+			border:1px solid #ccc;
+			background-image: url("img/1.jpg");
+			background-size:100% 100%;
+			margin-left:30px;
+		}
+		.jie{
+			width:16px;
+			height:16px;
+			position:absolute;
+			background-color:tomato;
+			border:2px solid #ffa500;
+			border-radius:50%;
+		}
+		.food{
+			display:block;
+			position:absolute;
+			width:20px;
+			height:20px;
+			border-radius:50%;
+		}
+		.bg{
+			width:1200px;
+			height:500px;
+			margin:50px auto;
+		}
+		#box2,#box1{
+			float:left;
+		}
+		#box2{
+			width:300px;
+			height:300px;
+		}
+		.p1,.p2,.p3{
+			margin-top:20px;
+			font-size:17px;
+			font-weight: bold;
+			position:relative;
+		}
+		.p2{
+			padding-right:90px;
+		}
+		.reset{
+			color:#fff;
+			display:block;
+			width:100%;
+			line-height:30px;
+			border-radius:3px;
+			text-align:center;
+			text-decoration: none;
+			background-color:tomato;
+			position:absolute;
+			top:120px;
+			cursor:pointer;
+		}
+		button{
+			width:100%;
+			height:30px;
+			border-radius:5px;
+			border:0;
+			outline:none;
+			color:#fff;
+			font-size:17px;
+			background-color:#2a6496;
+			cursor:pointer;
+			position:absolute;
+			top:60px;
+		}
+		h2{
+			text-align: center;
+		}
+		.hide{
+			display:none;
+		}
+		select{
+			width:100px;
+			padding-left:20px;
+			margin-top:5px;
+			float:right;
+		}
+		i{
+			font-style:normal;
+			margin-left:30px;
+			position:absolute;
+			font-size:20px;
+			top:-2px;
+			left:100px;
+			opacity: 1;
+			transition:all 0.4s;
+		}
+		.top{
+			opacity:0;
+			top:-20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<div id="box2">
+			<h2>大表哥贪吃蛇</h2>
+			<p class="p1">
+				获得分数：<i id="math"></i>
+			</p>
+			<p class="p2">
+				<select id="diffic">
+					<option value="200">新手</option>
+					<option value="100">普通</option>
+					<option value="70">大师</option>
+					<option value="30">至尊</option>
+				</select>
+				难度系数：
+			</p>
+			<p class="p3">
+				<button class="start">开始游戏</button>
+				<button class="hide">暂停游戏</button>
+				<a href="" class="reset">重新游戏</a>
+			</p>
+		</div>
+		<div id="box1"></div>	
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>
